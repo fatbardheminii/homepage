@@ -11,28 +11,22 @@ body {
     color: #333;
 }
 
+i:hover {
+    transform: scale(1.1);
+}
+
 /* Header/Hero section */
 .hero {
     background-color: #fff;
     padding: 2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 440px;
     min-height: 400px;
     position: relative;
     overflow: hidden;
 }
-
-/* .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: white;
-    transform: skewY(-3deg);
-} */
 
 .hero::before {
     content: '';
@@ -44,7 +38,7 @@ body {
     background: #0288a7; /* Match header background color */
     transform: skewY(-6deg); /* Adjust for diagonal effect */
     transform-origin: top left;
-    /* z-index: 0; Place the shape behind the content */
+    /* z-index: 0; /* Place the shape behind the content */
 }
 
 .profile-container {
@@ -68,15 +62,6 @@ body {
 
 .profile-image:hover {
     transform: scale(1.02);
-}
-
-.name {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    color: white;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .about-card {
@@ -104,6 +89,10 @@ a {
 /* Work section */
 .work-section {
     padding: 4rem 2rem;
+}
+
+.work-header {
+    margin-left: 2rem;
 }
 
 .projects-grid {
@@ -203,18 +192,60 @@ a {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
     .hero {
         flex-direction: column;
+        height: auto;
     }
 
-    .name {
-        position: static;
-        margin-top: 1rem;
-        text-align: center;
+    .hero::before {
+        transform: skewY(-20deg);
     }
+
+    .about-card {
+        width: 80%;
+        margin-top: 1rem;
+    }
+
+    .project-image {
+    height: 250px;
+}
 
     .contact-section {
         flex-direction: column;
+    }
+
+    .contact-image {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero, .projects-grid {
+        padding: 1rem;
+    }
+
+    .about-card {
+        width: 100%;
+    }
+    
+    .work-section, .contact-section {
+        padding: 4rem 1rem;
+    }
+
+    .contact-image {
+        width: 50%;
+    }
+
+    .contact-section {
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .projects-grid {
+        padding: 1rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
