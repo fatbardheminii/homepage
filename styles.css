@@ -84,6 +84,18 @@ i:hover {
 
 a {
     color: inherit;
+    text-decoration: none;
+}
+
+a h3 {
+    transition: all .25s ease-in-out;
+}
+
+a h3:hover {
+    transform: scaleX(1.05);
+    padding-bottom: .5rem;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 /* Work section */
