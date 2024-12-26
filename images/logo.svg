@@ -1,0 +1,21 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Rectangle -->
+  <rect width="100%" height="100%" fill="#0288a7"/> <!-- Darker blue background -->
+
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="#00a0bc"/>
+  
+  <!-- Code Symbols -->
+  <g fill="white" font-family="Monaco, Consolas, monospace" font-size="80" font-weight="bold">
+    <!-- Left Angle Bracket -->
+    <text x="35" y="125">&lt;</text>
+    <!-- Forward Slash -->
+    <text x="80" y="125">/</text>
+    <!-- Right Angle Bracket -->
+    <text x="125" y="125">&gt;</text>
+  </g>
+
+  <!-- Name -->
+  <text x="100" y="185" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Fatbardh Emini</text>
+</svg>
+
